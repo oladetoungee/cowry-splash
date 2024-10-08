@@ -8,4 +8,14 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify'],
   },
+
+  //  Title and favicon for the head section
+  app: {
+    head: {
+      title: 'CowrySplash',
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/logo.png' }
+      ]
+    }
+  }
 })
