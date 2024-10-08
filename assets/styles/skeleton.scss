@@ -1,39 +1,38 @@
-
+//STYLINF FOR THE SKELETON PLACEHODER FOR LOADING STATE
 .placeholder {
-    box-shadow: 0 4px 10px 0 rgba(33, 33, 33, 0.15);
-    background-color: #f5f5f5;
-    position: relative;
-  
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      left: -150px;
-      top: 0;
-      height: 100%;
-      width: 150px;
-      background: linear-gradient(
-        to right,
-        transparent 0%,
-        #e8e8e8 50%,
-        transparent 100%
-      );
-      animation: load 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-    }
-  
-    &__child {
-      width: 10em;
-      height: 0.5em;
-      background-color: #e6e6e6;
-    }
+  box-shadow: 0 4px 10px 0 rgba(33, 33, 33, 0.15); // Adds a subtle shadow effect.
+  background-color: #f5f5f5;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: 0;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      #e8e8e8 50%,
+      transparent 100%
+    ); // Creates the animated loading shimmer effect.
+    animation: load 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   }
-  
-  @keyframes load {
-    from {
-      left: -150px;
-    }
-    to {
-      left: 100%;
-    }
+
+  &__child {
+    width: 10em;
+    height: 0.5em;
+    background-color: #e6e6e6; // Placeholder child element.
   }
-  
+}
+
+@keyframes load {
+  from {
+    left: -150px; // Starts animation from the left side.
+  }
+  to {
+    left: 100%; // Animates across the entire width.
+  }
+}
