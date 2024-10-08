@@ -1,6 +1,6 @@
 <template>
   <button v-show="isVisible" @click="scrollToTop" class="scroll-to-top">
-    ↑ To Top
+    ↑ 
   </button>
 </template>
 
