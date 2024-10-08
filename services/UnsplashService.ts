@@ -2,7 +2,8 @@ import type { UnsplashImage, UnsplashPhoto } from '~/types/unsplash'; // Import 
 
 export class UnsplashServiceFunction {
   // I used environment variable for client ID to keep the key secure
-  private client_id = process.env.UNSPLASH_CLIENT_ID || '';
+  private client_id = import.meta.env.VITE_UNSPLASH_CLIENT_ID;
+
 
   // This fetches a list of photos from Unsplash based on the search query
   async getPhotos(query: string = 'africa'): Promise<UnsplashImage[]> {
