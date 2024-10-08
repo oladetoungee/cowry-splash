@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <Header @search="onSearch" />
     <ImageGrid :searchQuery="searchQuery" @openModal="openModal" /> 
     <Modal 
@@ -20,30 +19,28 @@ import ImageGrid from '~/components/ImageGrid.vue';
 import Modal from '~/components/Modal.vue';
 import ScrollToTop from '~/components/ScrollToTop.vue';
 
-// State to track search query, modal visibility, and selected image
-const searchQuery = ref('africa');  // Default search query
-const showModal = ref(false);  // Modal visibility state
-const modalImage = ref({});  // The image selected for the modal
+// State variables for search, modal visibility, and selected image
+const searchQuery = ref('africa');  // Default search term is Africa as directed
+const showModal = ref(false);  // Controls if the modal is visible
+const modalImage = ref({});  // Stores the image to display in the modal
 
-// Handle search event from Header component
+// Updates the search query based on user input
 function onSearch(query) {
-  searchQuery.value = query;  // Update search query
+  searchQuery.value = query;
 }
 
-// Function to open the modal with the selected image
+// Opens the modal with the selected image
 function openModal(image) {
-  console.log('Image passed to modal:', image);  // Debugging log
-  modalImage.value = image;  // Set the selected image
-  showModal.value = true;  // Show the modal
+  modalImage.value = image;
+  showModal.value = true;
 }
 
-// Function to close the modal
+// Closes the modal
 function closeModal() {
-  showModal.value = false;  // Hide the modal
+  showModal.value = false;
 }
 </script>
 
 <style scoped>
 @import '@/assets/styles/main.scss';
-
 </style>
