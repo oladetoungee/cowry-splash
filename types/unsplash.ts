@@ -2,12 +2,14 @@
 export interface UnsplashImage {
   id: string;
   urls: {
-    regular: string; // URL for the regular-sized image
+    regular: string; 
   };
+
   user: {
     name: string;
-    location?: string; // Optional location of the user
+    location?: string; 
   };
+  alt_description?: string;
 }
 
 export interface UnsplashPhoto extends UnsplashImage {
