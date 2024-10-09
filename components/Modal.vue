@@ -20,7 +20,7 @@ showModal: {
 },
 modalImage: {
   type: Object,
-  required: true,  // Modal needs an image object
+  required: true,  
 },
 });
 
